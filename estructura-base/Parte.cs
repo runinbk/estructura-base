@@ -1,4 +1,5 @@
-﻿using System;
+﻿using estructura_base.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace estructura_base
 {
-    //internal class Parte : IGraphics
-    internal class Parte
+    internal class Parte : IGraphics
     {
         public Dictionary<string, Poligono> poligonos { get; set; }
 

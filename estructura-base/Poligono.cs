@@ -1,10 +1,10 @@
-﻿using OpenTK.Graphics.OpenGL;
+﻿using estructura_base.Interfaces;
+using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
 
 namespace estructura_base
 {
-    //internal class Poligono : IGraphics
-    internal class Poligono
+    internal class Poligono : IGraphics
     {
 
         private List<Punto> puntos;
