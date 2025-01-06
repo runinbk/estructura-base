@@ -2,6 +2,7 @@
 using estructura_base.Interfaces;
 using System.Numerics;
 
+using Vector3 = OpenTK.Mathematics.Vector3;
 
 internal class Objeto : IGraphics
 {

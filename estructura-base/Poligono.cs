@@ -49,15 +49,22 @@ namespace estructura_base
 
         public void dibujar()
         {
-            GL.Color4(this.color);
+            GL.Color3(this.color[0], this.color[1], this.color[2]);
+            GL.Begin(PrimitiveType.Polygon); // Usar Polygon en lugar de LineLoop para ver las caras
+            foreach (var punto in puntos)
+            {
+                GL.Vertex3(punto.X, punto.Y, punto.Z);
+            }
+            GL.End();
+
+            // Opcional: dibujar también las líneas
+            GL.Color3(0.0f, 0.0f, 0.0f);
             GL.Begin(PrimitiveType.LineLoop);
             foreach (var punto in puntos)
             {
                 GL.Vertex3(punto.X, punto.Y, punto.Z);
             }
-
             GL.End();
-            GL.Flush();
         }
 
         public void setCentro(Punto newCentro)
